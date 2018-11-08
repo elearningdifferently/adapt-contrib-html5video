@@ -54,7 +54,8 @@
       "default": "",
       "inputType": "TextArea",
       "validators": [],
-      "help": "Short video description to go under the video"
+      "help": "Short video description to go under the video",
+      "translatable": true
     }
     }
   }
