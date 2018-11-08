@@ -47,14 +47,14 @@
       "validators": ["required"],
       "help": "Do you want users to be able to click on the video to pause or play? Think iPhones."
     },
-    "_description": {
+     "_description": {
       "type": "string",
       "required": true,
       "title": "Video description",
       "default": "",
       "inputType": "TextArea",
       "validators": [],
-      "help": "Video description to go under the video"
+      "help": "Short video description to go under the video"
     }
     }
   }
