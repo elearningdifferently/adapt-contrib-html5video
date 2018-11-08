@@ -1,0 +1,14 @@
+{{! Maintainers - Kevin Corry}}
+<div class="component-inner html5video-inner">
+  {{> component this}}
+  <div class="component-widget html5video-widget">
+    <div class="html5video-holder">
+        <video {{_attributes}} style="width:100%; height:auto; pointer-events:{{_clickable}};">
+            <source src="{{_source}}" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+  </div>
+</div>
+
+       

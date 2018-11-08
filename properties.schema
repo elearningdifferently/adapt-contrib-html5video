@@ -1,0 +1,51 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "$ref": "http://localhost/plugins/content/component/model.schema",
+  "properties": {
+    "_supportedLayout": {
+      "type": "string",
+      "required": true,
+      "enum": ["full-width", "half-width", "both"],
+      "default": "both",
+      "editorOnly": true
+    },
+    "instruction": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the instruction text"
+    },
+    "_source": {
+      "type": "string",
+      "required": true,
+      "title": "MP4 Source",
+      "default": "",
+      "inputType": "Text",
+      "validators": ["required"],
+      "help": "The URL which will be rendered inside the <video frame>"
+    },
+      "_attributes": {
+      "type": "string",
+      "required": true,
+      "title": "Video attributes",
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "Atrributes like controls, loop, autoplay go here"
+    },
+      "_clickable": {
+      "type": "string",
+      "required": true,
+      "title": "Playback controls",
+      "default": "auto",
+      "enum": ["auto", "none"],
+      "inputType": {"type": "Select", "options": ["auto", "none"]},
+      "validators": ["required"],
+      "help": "Do you want users to be able to click on the video to pause or play? Think iPhones."
+    }
+    }
+  }
