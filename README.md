@@ -1,4 +1,4 @@
 adapt-contrib-html5video
 ===============================
 
-Allows embedded content inside an ``<video>`` tag that will respond to theme breakpoints.
+Allows embedded content inside a ``<video>`` tag for Adapt Authoring tool.
