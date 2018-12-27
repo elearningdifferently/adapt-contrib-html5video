@@ -49,13 +49,23 @@
     },
      "_description": {
       "type": "string",
-      "required": true,
+      "required": false,
       "title": "Video description",
       "default": "",
       "inputType": "TextArea",
       "validators": [],
       "help": "Short video description to go under the video",
       "translatable": true
+    },
+     "_uniqueid": {
+      "type": "string",
+      "required": true,
+      "title": "Unique ID",
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "Custom unique ID of the video element",
+      "translatable": false
     }
     }
   }

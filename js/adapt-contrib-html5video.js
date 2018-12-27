@@ -5,6 +5,10 @@ define(function(require) {
 
     var HTML5Video = ComponentView.extend({
 
+        
+        events: {
+            'inview': 'inview'
+},
 
         preRender: function() {
             this.$el.addClass("no-state");
@@ -28,6 +32,8 @@ define(function(require) {
         },
 
         inview: function(event, visible, visiblePartX, visiblePartY) {
+            
+                        
             if (visible) {
                 if (visiblePartY === 'top') {
                     this._isVisibleTop = true;
@@ -40,6 +46,8 @@ define(function(require) {
 
                 if (this._isVisibleTop && this._isVisibleBottom) {
                     this.$('.component-inner').off('inview');
+                    console.log("this works!");
+                    $('#movie1').get(0).play();
                     this.setCompletionStatus();
                 }
 
