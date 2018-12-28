@@ -2,9 +2,8 @@ define(function(require) {
 
     var ComponentView = require('coreViews/componentView');
     var Adapt = require('coreJS/adapt');
-
     var HTML5Video = ComponentView.extend({
-
+    
         
         events: {
             'inview': 'inview'
@@ -27,12 +26,11 @@ define(function(require) {
 
             // If reset is enabled set defaults
             if (isResetOnRevisit) {
-                this.model.reset(isResetOnRevisit);
+               // this.model.reset(isResetOnRevisit);
             }
         },
 
         inview: function(event, visible, visiblePartX, visiblePartY) {
-            
                         
             if (visible) {
                 if (visiblePartY === 'top') {
@@ -46,8 +44,7 @@ define(function(require) {
 
                 if (this._isVisibleTop && this._isVisibleBottom) {
                     this.$('.component-inner').off('inview');
-                    console.log("this works!");
-                    $('#movie1').get(0).play();
+                    $("#" + this.model.get('_uniqueid')).get(0).play();
                     this.setCompletionStatus();
                 }
 
