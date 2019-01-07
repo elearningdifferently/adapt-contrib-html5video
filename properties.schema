@@ -28,6 +28,21 @@
       "validators": ["required"],
       "help": "The URL which will be rendered inside the <video frame>"
     },
+    "_poster": {
+    "type": "object",
+    "required": false,
+    "title": "Video Poster",
+    "properties":{
+      "src": {
+        "type": "string",
+        "required": false,
+        "default": "",
+        "inputType": "Asset:image",
+        "validators": [],
+        "help": "Optional image which will be displayed while the video is loading"
+       }
+     }
+    },
       "_attributes": {
       "type": "string",
       "required": true,
